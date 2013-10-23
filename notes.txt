@@ -1,0 +1,114 @@
+64 characters wide, 39 characters tall
+this game is about a fighter and his three feats... or maybe just one
+NO FEATS
+
+
+TODO:
+DONE make ranged attacks
+DONE display item stats in inventory
+DONE make a see-messages screen
+DONE make items droppable
+DONE make items able to be picked up
+DONE make it possible to die
+DONE make it possible to move to another level
+DONE add some sort of helpfile for players to see 
+DONE spruce up inventory screen, make it pretty
+DONE make these human zombies instead
+DONE make blood spatter
+DONE (placeholderly) implement levelling up and experience gains 
+DONE make the non-equipped slots visible for selection
+DONE fix some vague bug with the inventory UI - something to do with the invisible slots immediately getting an item
+DONE fix issue with multiple equipping of same item
+DONE give player control over what's equipped
+DONE make items do something
+DONE make slots to have items equipped
+DONE make items for inventory
+DONE give player checkable inventory
+DONE have critters attack YOU
+DONE make attack rolls and variable damage
+DONE display text in the status line to indicate that you're doing something
+DONE make it possible to hit a critter
+DONE make a critter move towards you if it is within X tiles of you
+DONE blank line issue when "" is name
+DONE fix issue after moving player critter 
+DONE move player to critters list, number 0
+DONE display stats on stats line
+DONE handle creature collision 
+DONE construct simple stat system
+DONE have a single critter randomly walk about, bumping into walls
+DONE fix font display
+DONE fix memory leak
+DONE fix diagonal movement restrictions so they stop you, not just partially block
+DONE display player name in status line 
+DONE add more status lines or figure out better way of having messages
+DONE have colours be properly printed
+DONE make it possible to close doors
+DONE make more general level selection than "0" everywhere
+DONE make doors that can be opened but when closed occlude movement
+DONE make solid tiles block movement
+DONE generate a simple map 
+DONE make a map handling function with walking around
+DONE make a genericified text-cutscene display thing that takes a bunch of text and displays it properly with pretty borders
+DONE get text to have opaque background, or choosable at least
+DONE make introductory text storyline thingy EXCUSE PLOT
+DONE make feats input
+DONE make sex input
+DONE make character name input
+DONE make intro screen function
+DONE make a screen-clearing function
+DONE make black background happen
+
+Paradigm:
+    - small things ought to be small-letter,
+    - big things, capital letter
+    
+    AFTERLIFE IS FULL, OLD FRIENDS BREAK OUT
+    
+    
+
+critters:
+@   - humans and civilized demi-humans (humans, elves, dwarves, etc)
+&   - angels and demons (angels, demons, imps, demon-lords)
+
+The rest would be DYNAMIC like Dwarf Fortress' MEGABEASTS.
+WEB-SPITTING ACID-RESISTANT MONKEY SPIDER DEMON
+
+a,A - arthropods (ants, bees, spiders, crabs, giant enemy crabs)
+b,B - birds (ravens, eagles, rocs, phoenixes, chickens, emus)
+c,C - canines (dogs, wolves, foxes, worgs)
+d,D - dragons (color-coded)
+e,E - elementals (earth, water, fire, air)
+f,F - felines (cats, panthers, tigers)
+g,G - glires (rats, giant rats, rabbits, killer rabbits)
+h,H - humanoids and hominids (orcs, goblins, giants, trolls, apes, monkeys)
+i,I - ichthyes (fish, piranha, sharks, eels)
+j,J -
+k,K -
+l,L -
+m,M - molluscs (squids, giant squids, slugs, snails, krakens, clams)
+n,N -
+o,O - oozes (brown pudding, black pudding, gelatinous cube)
+p,P - plants (giant flytraps, killer vines, shriekers)
+q,Q - quadrupeds (elephants, horses, unicorns, mammoths, boars, zebras, camels, hippos)
+r,R - reptiles and amphibians (snakes, crocodiles, dinosaurs, giant frogs, salamanders)
+s,S -
+t,T -
+u,U - ursines (koala bears, grizzly bears, owlbears, polar bears)
+v,V -
+w,W - 
+x,X - xenomorphs (aliens, grays, predators, ur-quan)
+y,Y -
+z,Z - 
+
+HD hit dice, like levels, gives bonuses to all others
+HP cur/max obvious
+SP cur/max for special moves
+ATK for attack value to-hit
+DEF for defense value penalizes enemy to-hit
+DMG for damage rating
+ARM for armor rating
+
+for now, let us disregard the difference between ranged and melee attack ratings
+
+
+

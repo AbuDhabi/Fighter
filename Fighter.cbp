@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Fighter" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/Fighter" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="advance_turn.cpp" />
+		<Unit filename="chargen.cpp" />
+		<Unit filename="critters.cpp" />
+		<Unit filename="game_over.cpp" />
+		<Unit filename="genmap.cpp" />
+		<Unit filename="globals.h" />
+		<Unit filename="header.h" />
+		<Unit filename="help.cpp" />
+		<Unit filename="intro.cpp" />
+		<Unit filename="inventory.cpp" />
+		<Unit filename="load_media.cpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mapmode.cpp" />
+		<Unit filename="message_log.cpp" />
+		<Unit filename="misc_func.cpp" />
+		<Unit filename="notes.txt" />
+		<Unit filename="put_text.cpp" />
+		<Unit filename="storyline.cpp" />
+		<Unit filename="structs.h" />
+		<Unit filename="title_screen.cpp" />
+		<Extensions>
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

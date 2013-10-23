@@ -1,0 +1,363 @@
+# depslib dependency file v1.0
+1381181413 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\main.cpp
+	"header.h"
+	"globals.h"
+
+1377903965 "
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1326114588 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_config.h
+	"SDL_platform.h"
+	"SDL_config_dreamcast.h"
+	"SDL_config_macos.h"
+	"SDL_config_macosx.h"
+	"SDL_config_symbian.h"
+	"SDL_config_win32.h"
+	"SDL_config_os2.h"
+	"SDL_config_minimal.h"
+
+1326114588 g_minimal.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_platform.h
+
+1326114594 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_config_win32.h
+	"SDL_platform.h"
+
+1326114594 orm.h"
+
+1326114600 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\begin_code.h
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\close_code.h
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_keysym.h
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1325742240 .h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\mingw\lib\sdl\sdl-1.2.15\include\sdl\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1381784785 c:\documents and settings\administrator\my documents\dropbox\programming\fighter\header.h
+	<cstdlib>
+	<stdlib.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<SDL/SDL_getenv.h>
+	<SDL/SDL_mixer.h>
+	<SDL/SDL_ttf.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_gfxPrimitives.h>
+	<SDL/SDL.h>
+	<SDL_getenv.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	<SDL_image.h>
+	<SDL_gfxPrimitives.h>
+	<SDL/SDL.h>
+	<SDL/SDL_getenv.h>
+	<SDL/SDL_mixer.h>
+	<SDL/SDL_ttf.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_gfxPrimitives.h>
+	<cstring>
+	<time.h>
+	<math.h>
+	"structs.h"
+
+1381164901 c:\documents and settings\administrator\my documents\dropbox\programming\fighter\globals.h
+
+1377808827 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\clean_up.cpp
+	"header.h"
+	"globals.h"
+
+1378933371 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\load_media.cpp
+	"header.h"
+	"globals.h"
+
+1380142415 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\put_text.cpp
+	"header.h"
+	"globals.h"
+
+1381169060 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\misc_func.cpp
+	"header.h"
+	"globals.h"
+
+1380119539 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\intro.cpp
+	"header.h"
+	"globals.h"
+
+1381166549 c:\documents and settings\administrator\my documents\dropbox\programming\fighter\structs.h
+
+1380393847 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\chargen.cpp
+	"header.h"
+	"globals.h"
+
+1380125255 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\storyline.cpp
+	"header.h"
+	"globals.h"
+
+1377977415 source:/home/jpkociak/Dropbox/programming/Fighter/chargen.cpp
+	"header.h"
+	"globals.h"
+
+1377978269 /home/jpkociak/Dropbox/programming/Fighter/header.h
+	<cstdlib>
+	<stdlib.h>
+	<cstdlib>
+	<stdlib.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<SDL/SDL_mixer.h>
+	<SDL/SDL_ttf.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_gfxPrimitives.h>
+	<SDL/SDL.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	<SDL_image.h>
+	<SDL_gfxPrimitives.h>
+	<SDL/SDL.h>
+	<SDL/SDL_mixer.h>
+	<SDL/SDL_ttf.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_gfxPrimitives.h>
+	"structs.h"
+
+1377968118 /home/jpkociak/Dropbox/programming/Fighter/structs.h
+
+1377968118 /home/jpkociak/Dropbox/programming/Fighter/globals.h
+
+1377861712 source:/home/jpkociak/Dropbox/programming/Fighter/intro.cpp
+	"header.h"
+	"globals.h"
+
+1377815533 source:/home/jpkociak/Dropbox/programming/Fighter/load_media.cpp
+	"header.h"
+	"globals.h"
+
+1377968126 source:/home/jpkociak/Dropbox/programming/Fighter/main.cpp
+	"header.h"
+	"globals.h"
+
+1377965475 source:/home/jpkociak/Dropbox/programming/Fighter/misc_func.cpp
+	"header.h"
+	"globals.h"
+
+1377903944 source:/home/jpkociak/Dropbox/programming/Fighter/put_text.cpp
+	"header.h"
+	"globals.h"
+
+1377966782 source:/home/jpkociak/Dropbox/programming/Fighter/storyline.cpp
+	"header.h"
+	"globals.h"
+
+1377966811 source:/home/jpkociak/Dropbox/programming/Fighter/mapmode.cpp
+	"header.h"
+	"globals.h"
+
+1377967907 source:/home/jpkociak/Dropbox/programming/Fighter/genmap.cpp
+	"header.h"
+	"globals.h"
+
+1380649424 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\genmap.cpp
+	"header.h"
+	"globals.h"
+
+1381785299 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\mapmode.cpp
+	"header.h"
+	"globals.h"
+
+1381171360 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\advance_turn.cpp
+	"header.h"
+	"globals.h"
+
+1380125248 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\title_screen.cpp
+	"header.h"
+	"globals.h"
+
+1381243726 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\inventory.cpp
+	"header.h"
+	"globals.h"
+
+1380486338 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\critters.cpp
+	"header.h"
+	"globals.h"
+
+1380716229 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\game_over.cpp
+	"header.h"
+	"globals.h"
+
+1381179928 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\message_log.cpp
+	"header.h"
+	"globals.h"
+
+1381182604 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\help.cpp
+	"header.h"
+	"globals.h"
+
