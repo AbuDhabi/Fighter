@@ -90,7 +90,7 @@ int show_inventory() {
                                 game.items[game.item_index].y = player.y;
                                 game.items[game.item_index].level_id = player.level_id;
                                 game.item_index++;
-                                player.inventory[selected_list] = ITEM_TEMPLATES[0]; // Nothing
+                                player.inventory[selected_list] = game.ITEM_TEMPLATES[0]; // Nothing
                                 for (int i=0;i<ITEM_SLOTS;i++) {
                                     if (player.slots[i] == selected_list) player.slots[i] = ITEM_NONE_EQUIPPED;
                                 }

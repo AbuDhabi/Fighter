@@ -2,8 +2,22 @@
 this game is about a fighter and his three feats... or maybe just one
 NO FEATS
 
-
 TODO:
+dump death log to stdout
+DONE fix crash bug on trying to play again after a death
+DONE heal yourself over time
+make a level indicator
+improve game over screen
+DONE fix the name affixes so they work properly instead of corrupting
+DONE holding down button should accelerate movement
+DONE generate random creatures! and spawn them randomly
+DONE improve dungeons!
+make an end condition
+DONE implement line of sight
+DONE fill levels with creatures
+DONE fill levels with terrain placeholderly
+DONE make levels automatically place exits
+refactor some of this shit
 DONE make ranged attacks
 DONE display item stats in inventory
 DONE make a see-messages screen

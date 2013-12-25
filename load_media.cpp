@@ -25,7 +25,8 @@ Mix_Chunk* load_sound(const char * path) {
 
 bool load_media() {
     // prevent undefined shit with media
-    for (int i=0;i<255;i++) {
+    // WARNING: Assumes MAX_BITMAPS == MAX_SOUNDS
+    for (int i=0;i<MAX_BITMAPS;i++) {
         BITMAPS[i] = NULL;
         SOUNDS[i] = NULL;
     }
@@ -50,8 +51,8 @@ bool load_media() {
 }
 
 bool clean_up() {
-
-    for (int i=0;i<255;i++) {
+    // WARNING: Assumes all these are the same
+    for (int i=0;i<MAX_BITMAPS;i++) {
         if (FONTS[i] != NULL) {
             SDL_FreeSurface(BITMAPS[i]);
             Mix_FreeChunk(SOUNDS[i]);

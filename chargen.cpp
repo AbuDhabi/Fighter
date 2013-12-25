@@ -7,11 +7,13 @@ int chargen() {
     int index = 0;
     int progress = 0;
     char sex[8] = "Male";
-    player.x = 10;
-    player.y = 10;
-    player.atk = 200;
-    player.dmg = 200;
-    player.slots[0] = 0; // should be a paperweight
+    player.x = 20;
+    player.y = 20;
+    player.atk = 20;
+    player.dmg = 20;
+    player.level_id = 0;
+    player.hp = 10;
+    //player.slots[0] = 0; // should be a paperweight
 
     bool done = false;
     while (!done) {

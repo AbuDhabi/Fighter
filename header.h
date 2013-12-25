@@ -1,8 +1,20 @@
 #ifndef HEADER_H_INCLUDED
 #define HEADER_H_INCLUDED
 
+#define MAX_BITMAPS 255
+#define MAX_SOUNDS 255
+#define MAX_FONTS 255
+#define MAX_TILES 255
+#define MAX_COLORS 255
+#define MAX_CRITTER_TEMPLATES 255
+#define MAX_ITEM_TEMPLATES 255
+
 #define MAP_MAXX 64
 #define MAP_MAXY 36 // ugh, silly
+
+#define STRING_DEFAULT_LENGTH 80
+
+#define OMNISCIENCE false
 
 #define STATE_INITIAL 0
 #define STATE_CHARGEN 1
@@ -87,5 +99,11 @@ int game_over();
 int print_text_cutscene(const char* text);
 int message_log();
 int print_help_mapmode();
+void reveal_los();
+bool in_line_of_sight(int critter_id, int level_id, int x, int y);
+int maximum (int x1, int x2);
+int minimum (int x1, int x2);
+int generate_critter_templates();
+int level_up_critter(int critter_id);
 
 #endif // HEADER_H_INCLUDED

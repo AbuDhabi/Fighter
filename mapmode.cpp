@@ -8,7 +8,8 @@ int print_level(int level_id) {
             //char temp[80];
             //snprintf(temp,80,"%c",game.levels[level_id].tiles[i][j].visual);
             //put_text(i,j,temp);
-            print_tile(i,j,game.levels[level_id].tiles[i][j]);
+            if (game.levels[level_id].tiles[i][j].explored || OMNISCIENCE)
+                print_tile(i,j,game.levels[level_id].tiles[i][j]);
         }
     }
 
@@ -24,7 +25,8 @@ int print_critters(int level_id) {
     for (int i=1;i<game.critter_index;i++) {
         if (game.critters[i].level_id == level_id) {
             snprintf(temp,80,"%c",game.critters[i].visual);
-            put_text(game.critters[i].x,game.critters[i].y,temp);
+            if (in_line_of_sight(PLAYER_CRITTER,level_id,game.critters[i].x,game.critters[i].y) || OMNISCIENCE)
+                put_text(game.critters[i].x,game.critters[i].y,temp,game.critters[i].color,COLORS[COLOR_DEFAULT_BG]);
         }
     }
     return 0;
@@ -35,7 +37,8 @@ int print_items(int level_id) {
     for (int i=0;i<MAX_ITEMS;i++){
         if (game.items[i].level_id == level_id) {
             snprintf(temp,8,"%c",game.items[i].visual);
-            put_text(game.items[i].x,game.items[i].y,temp);
+            if (game.levels[level_id].tiles[game.items[i].x][game.items[i].y].explored || OMNISCIENCE)
+                put_text(game.items[i].x,game.items[i].y,temp);
         }
     }
 
@@ -120,7 +123,7 @@ int attack_critter(int attacker, int defender) {
         game.critters[defender].hp -= damage; // deals 10 damnage
         game.critters[attacker].xp += 10 * game.critters[defender].hit_dice / game.critters[attacker].hit_dice; // xp gain, placeholder
         // blood! also placeholdery due to that 0
-        if (damage > 0) game.levels[0].tiles[game.critters[defender].x][game.critters[defender].y].bg = COLORS[COLOR_RED];
+        if (damage > 0) game.levels[game.critters[defender].level_id].tiles[game.critters[defender].x][game.critters[defender].y].bg = COLORS[COLOR_RED];
         
         snprintf(temp,80,"%s hits the %s for %d damage (%d%%)!",atkname,defname,damage,hitchance);
         add_status_msg(temp);

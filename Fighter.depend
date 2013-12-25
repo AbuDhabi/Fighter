@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1381181413 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\main.cpp
+1387999826 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\main.cpp
 	"header.h"
 	"globals.h"
 
@@ -203,7 +203,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1381784785 c:\documents and settings\administrator\my documents\dropbox\programming\fighter\header.h
+1388000463 c:\documents and settings\administrator\my documents\dropbox\programming\fighter\header.h
 	<cstdlib>
 	<stdlib.h>
 	<stdlib.h>
@@ -230,35 +230,35 @@
 	<math.h>
 	"structs.h"
 
-1381164901 c:\documents and settings\administrator\my documents\dropbox\programming\fighter\globals.h
+1388000248 c:\documents and settings\administrator\my documents\dropbox\programming\fighter\globals.h
 
 1377808827 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\clean_up.cpp
 	"header.h"
 	"globals.h"
 
-1378933371 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\load_media.cpp
+1378929771 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\load_media.cpp
 	"header.h"
 	"globals.h"
 
-1380142415 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\put_text.cpp
+1380138815 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\put_text.cpp
 	"header.h"
 	"globals.h"
 
-1381169060 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\misc_func.cpp
+1388000035 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\misc_func.cpp
 	"header.h"
 	"globals.h"
 
-1380119539 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\intro.cpp
+1380115939 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\intro.cpp
 	"header.h"
 	"globals.h"
 
-1381166549 c:\documents and settings\administrator\my documents\dropbox\programming\fighter\structs.h
+1388000501 c:\documents and settings\administrator\my documents\dropbox\programming\fighter\structs.h
 
-1380393847 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\chargen.cpp
+1386956813 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\chargen.cpp
 	"header.h"
 	"globals.h"
 
-1380125255 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\storyline.cpp
+1380121655 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\storyline.cpp
 	"header.h"
 	"globals.h"
 
@@ -325,39 +325,43 @@
 	"header.h"
 	"globals.h"
 
-1380649424 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\genmap.cpp
+1387999997 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\genmap.cpp
 	"header.h"
 	"globals.h"
 
-1381785299 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\mapmode.cpp
+1386952607 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\mapmode.cpp
 	"header.h"
 	"globals.h"
 
-1381171360 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\advance_turn.cpp
+1386956691 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\advance_turn.cpp
 	"header.h"
 	"globals.h"
 
-1380125248 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\title_screen.cpp
+1386894618 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\title_screen.cpp
 	"header.h"
 	"globals.h"
 
-1381243726 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\inventory.cpp
+1388000035 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\inventory.cpp
 	"header.h"
 	"globals.h"
 
-1380486338 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\critters.cpp
+1387999997 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\critters.cpp
 	"header.h"
 	"globals.h"
 
-1380716229 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\game_over.cpp
+1386894597 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\game_over.cpp
 	"header.h"
 	"globals.h"
 
-1381179928 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\message_log.cpp
+1381176328 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\message_log.cpp
 	"header.h"
 	"globals.h"
 
-1381182604 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\help.cpp
+1381179004 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\help.cpp
+	"header.h"
+	"globals.h"
+
+1386612221 source:c:\documents and settings\administrator\my documents\dropbox\programming\fighter\vision.cpp
 	"header.h"
 	"globals.h"
 

@@ -1,6 +1,11 @@
 #ifndef STRUCTS_H_INCLUDED
 #define STRUCTS_H_INCLUDED
 
+typedef struct Point {
+    int x;
+    int y;
+} Point;
+
 #define COLOR_WHITE 0
 #define COLOR_BLACK 1
 #define COLOR_RED 2
@@ -42,10 +47,24 @@ typedef struct Item {
 #define ITEM_NONE_EQUIPPED -1
 
 #define CRITTER_FLAGS 1
-#define CRITTER_FLAG_ZOMBIE 1
+#define CRITTER_FLAG0_ZOMBIE 1
+#define CRITTER_FLAG0_BIG 2
+#define CRITTER_FLAG0_SMALL 4
+#define CRITTER_FLAG0_ANGRY 8
+#define CRITTER_FLAG0_ELDER 16
+#define CRITTER_FLAG0_INTELLIGENT 32
+#define CRITTER_FLAG0_STUPID 64
+#define CRITTER_FLAG0_STRONG 128
+#define CRITTER_FLAG0_WEAK 256
+#define CRITTER_FLAG0_SKELETAL 512
+#define CRITTER_FLAG0_FAST 1024
+#define CRITTER_FLAG0_SLOW 2048
+#define CRITTER_FLAG0_YOUNG 4096
+#define CRITTER_FLAG0_MELLOW 8192
+#define CRITTER_FLAG0_LASTFLAG 8192
 
 typedef struct Critter {
-    char name[16];
+    char name[80];
     int sex;
     int x, y; // coords on level
     int level_id; // which level is it on
@@ -79,6 +98,8 @@ typedef struct Exit {
 #define TILE_DOOR_OPEN 3
 #define TILE_DOOR_LOCKED 4
 #define TILE_EXIT 5
+#define TILE_ENTRANCE 6
+#define TILE_WALL_SIMPLE 7
 
 #define EXIT_TO_NOWHERE -1
 
@@ -88,6 +109,8 @@ typedef struct Tile {
     SDL_Color fg; // foreground color
     SDL_Color bg; // background color
     bool blocks; // whether it blocks movement
+    bool transparent; // whether it can be seen through
+    bool explored; // whether it has been seen before
     Exit exit; // where it moves you
     char name[80]; 
 } Tile;
@@ -101,15 +124,19 @@ typedef struct Level { // don't want conflicts with 'map'
 // don't name anything in the code "player", srsly
 #define MAX_STATUS_MESSAGES 30
 #define MAX_STATUS_MESSAGE_LENGTH 255
+ // for the moment 255 is more than enough
+#define MAX_LEVELS 255
 
 typedef struct Game {
     unsigned long int turns;
-    Level levels[255]; // for the moment
+    Level levels[MAX_LEVELS];
     Critter critters[MAX_CRITTERS]; // might be sufficient
     int critter_index; 
     Item items[MAX_ITEMS];
     int item_index;
     char status_msgs[MAX_STATUS_MESSAGES][MAX_STATUS_MESSAGE_LENGTH];
+    Critter CRITTER_TEMPLATES[MAX_CRITTER_TEMPLATES];
+    Item ITEM_TEMPLATES[MAX_ITEM_TEMPLATES]; // might not be enough
 } Game;
 
 #endif // STRUCTS_H_INCLUDED

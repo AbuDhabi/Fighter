@@ -25,6 +25,9 @@ int title_screen() {
                     if (event.key.keysym.sym == SDLK_3) {
                         return STATE_EXIT;
                     }
+                    if (event.key.keysym.sym == SDLK_ESCAPE) {
+                        return STATE_EXIT;
+                    }
                     break;
                 }
             } // end switch

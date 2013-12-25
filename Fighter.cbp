@@ -42,6 +42,7 @@
 		<Unit filename="storyline.cpp" />
 		<Unit filename="structs.h" />
 		<Unit filename="title_screen.cpp" />
+		<Unit filename="vision.cpp" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />

@@ -3,16 +3,14 @@
 
 int MAXX = 768;
 int MAXY = 628;
-SDL_Surface* BITMAPS[255]; //255 is more than I'll need
-Mix_Chunk* SOUNDS[255];
-TTF_Font* FONTS[255]; // HAHAHA
+SDL_Surface* BITMAPS[MAX_BITMAPS]; //255 is more than I'll need
+Mix_Chunk* SOUNDS[MAX_SOUNDS];
+TTF_Font* FONTS[MAX_FONTS]; // HAHAHA
 TTF_Font* DEFAULT_FONT;
 SDL_Surface* MAIN_SCREEN;
 bool END_PROGRAM = false;
-Tile TILES[255];
-SDL_Color COLORS[255];
-Critter TEMPLATES[255];
-Item ITEM_TEMPLATES[255]; // might not be enough
+Tile TILES[MAX_TILES];
+SDL_Color COLORS[MAX_COLORS];
 
 //game state
 Game game;
@@ -31,6 +29,10 @@ int main ( int argc, char** argv ) {
     SDL_EnableUNICODE( SDL_ENABLE );  
     atexit(SDL_Quit);
     atexit(TTF_Quit);
+    if ( ( SDL_EnableKeyRepeat( 100, SDL_DEFAULT_REPEAT_INTERVAL *2 ) ) ) {
+        fprintf( stderr, "Setting keyboard repeat failed: %s\n", SDL_GetError());
+        return 1;
+    }
 
     // create a new window
     MAIN_SCREEN = SDL_SetVideoMode(MAXX, MAXY, 16, SDL_HWSURFACE|SDL_DOUBLEBUF);
@@ -63,7 +65,10 @@ int main ( int argc, char** argv ) {
                 generate_maps(); 
                 state = STATE_MAPMODE;
         }
-        if (state == STATE_MAPMODE) { state = mapmode(); }
+        if (state == STATE_MAPMODE) { 
+                reveal_los(); // a bit of a placeholder solution
+                state = mapmode(); 
+        }
         if (state == STATE_INVENTORY) { state = show_inventory(); }
         if (state == STATE_MESSAGE_LOG) { state = message_log(); }
         if (state == STATE_HELP_MAPMODE) { state = print_help_mapmode(); }

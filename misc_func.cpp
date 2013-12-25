@@ -26,6 +26,8 @@ void tiles_setup() {
     TILES[TILE_FLOOR].fg = COLORS[COLOR_DEFAULT_FG];
     TILES[TILE_FLOOR].bg = COLORS[COLOR_DEFAULT_BG];
     TILES[TILE_FLOOR].exit = e;
+    TILES[TILE_FLOOR].explored = false;
+    TILES[TILE_FLOOR].transparent = true;
     TILES[TILE_WALL_HORIZONTAL].tile_id = TILE_WALL_HORIZONTAL;
     snprintf(TILES[TILE_WALL_HORIZONTAL].name,80,"Wall");
     TILES[TILE_WALL_HORIZONTAL].blocks = true;
@@ -33,6 +35,8 @@ void tiles_setup() {
     TILES[TILE_WALL_HORIZONTAL].fg = COLORS[COLOR_DEFAULT_FG];
     TILES[TILE_WALL_HORIZONTAL].bg = COLORS[COLOR_DEFAULT_BG];
     TILES[TILE_WALL_HORIZONTAL].exit = e;
+    TILES[TILE_WALL_HORIZONTAL].explored = false;
+    TILES[TILE_WALL_HORIZONTAL].transparent = false;
     TILES[TILE_WALL_VERTICAL].tile_id = TILE_WALL_VERTICAL;
     snprintf(TILES[TILE_WALL_VERTICAL].name,80,"Wall");
     TILES[TILE_WALL_VERTICAL].blocks = true;
@@ -40,6 +44,8 @@ void tiles_setup() {
     TILES[TILE_WALL_VERTICAL].fg = COLORS[COLOR_DEFAULT_FG];
     TILES[TILE_WALL_VERTICAL].bg = COLORS[COLOR_DEFAULT_BG];
     TILES[TILE_WALL_VERTICAL].exit = e;
+    TILES[TILE_WALL_VERTICAL].explored = false;
+    TILES[TILE_WALL_VERTICAL].transparent = false;
     TILES[TILE_DOOR_OPEN].tile_id = TILE_DOOR_OPEN;
     snprintf(TILES[TILE_DOOR_OPEN].name,80,"Door");
     TILES[TILE_DOOR_OPEN].blocks = false;
@@ -47,6 +53,8 @@ void tiles_setup() {
     TILES[TILE_DOOR_OPEN].fg = COLORS[COLOR_YELLOW];
     TILES[TILE_DOOR_OPEN].bg = COLORS[COLOR_DEFAULT_BG];
     TILES[TILE_DOOR_OPEN].exit = e;
+    TILES[TILE_DOOR_OPEN].explored = false;
+    TILES[TILE_DOOR_OPEN].transparent = true;
     TILES[TILE_DOOR_LOCKED].tile_id = TILE_DOOR_LOCKED;
     snprintf(TILES[TILE_DOOR_LOCKED].name,80,"Door");
     TILES[TILE_DOOR_LOCKED].blocks = true;
@@ -54,84 +62,109 @@ void tiles_setup() {
     TILES[TILE_DOOR_LOCKED].fg = COLORS[COLOR_DEFAULT_BG];
     TILES[TILE_DOOR_LOCKED].bg = COLORS[COLOR_YELLOW];
     TILES[TILE_DOOR_LOCKED].exit = e;
+    TILES[TILE_DOOR_LOCKED].explored = false;
+    TILES[TILE_DOOR_LOCKED].transparent = false;
     TILES[TILE_EXIT].tile_id = TILE_EXIT;
     snprintf(TILES[TILE_EXIT].name,80,"Exit");
     TILES[TILE_EXIT].blocks = false;
     TILES[TILE_EXIT].visual = '>';
     TILES[TILE_EXIT].fg = COLORS[COLOR_DEFAULT_FG];
     TILES[TILE_EXIT].bg = COLORS[COLOR_DEFAULT_BG];
-    TILES[TILE_FLOOR].exit = e;
+    TILES[TILE_EXIT].exit = e;
+    TILES[TILE_EXIT].explored = false;
+    TILES[TILE_EXIT].transparent = true;
+    TILES[TILE_ENTRANCE].tile_id = TILE_ENTRANCE;
+    snprintf(TILES[TILE_ENTRANCE].name,80,"Entrance");
+    TILES[TILE_ENTRANCE].blocks = false;
+    TILES[TILE_ENTRANCE].visual = '<';
+    TILES[TILE_ENTRANCE].fg = COLORS[COLOR_DEFAULT_FG];
+    TILES[TILE_ENTRANCE].bg = COLORS[COLOR_DEFAULT_BG];
+    TILES[TILE_ENTRANCE].exit = e;
+    TILES[TILE_ENTRANCE].explored = false;
+    TILES[TILE_ENTRANCE].transparent = true;
+    TILES[TILE_WALL_SIMPLE].tile_id = TILE_WALL_SIMPLE;
+    snprintf(TILES[TILE_WALL_SIMPLE].name,80,"Wall");
+    TILES[TILE_WALL_SIMPLE].blocks = true;
+    TILES[TILE_WALL_SIMPLE].visual = ' ';
+    TILES[TILE_WALL_SIMPLE].fg = COLORS[COLOR_DEFAULT_FG];
+    TILES[TILE_WALL_SIMPLE].bg = COLORS[COLOR_DEFAULT_FG];
+    TILES[TILE_WALL_SIMPLE].exit = e;
+    TILES[TILE_WALL_SIMPLE].explored = false;
+    TILES[TILE_WALL_SIMPLE].transparent = false;
 }
 
 void items_setup() {
     // work out some kind of system here, probably don't want to leave it numbers
-    ITEM_TEMPLATES[0].arm = 0;
-    ITEM_TEMPLATES[0].atk = 0;
-    ITEM_TEMPLATES[0].def = 0;
-    ITEM_TEMPLATES[0].dmg = 0;
-    ITEM_TEMPLATES[0].level_id = -1; // afterlife for items?
-    ITEM_TEMPLATES[0].x = 0;
-    ITEM_TEMPLATES[0].y = 0;
-    ITEM_TEMPLATES[0].visual = ' ';
-    snprintf(ITEM_TEMPLATES[0].name,NAME_MAX_ITEM,"Nothing");
-    ITEM_TEMPLATES[1].arm = 101;
-    ITEM_TEMPLATES[1].atk = 101;
-    ITEM_TEMPLATES[1].def = 101;
-    ITEM_TEMPLATES[1].dmg = 101;
-    ITEM_TEMPLATES[1].level_id = -1; // afterlife for items?
-    ITEM_TEMPLATES[1].x = 0;
-    ITEM_TEMPLATES[1].y = 0;
-    ITEM_TEMPLATES[1].visual = '*';
-    snprintf(ITEM_TEMPLATES[1].name,NAME_MAX_ITEM,"Paperweight");
+    game.ITEM_TEMPLATES[0].arm = 0;
+    game.ITEM_TEMPLATES[0].atk = 0;
+    game.ITEM_TEMPLATES[0].def = 0;
+    game.ITEM_TEMPLATES[0].dmg = 0;
+    game.ITEM_TEMPLATES[0].level_id = -1; // afterlife for items?
+    game.ITEM_TEMPLATES[0].x = 0;
+    game.ITEM_TEMPLATES[0].y = 0;
+    game.ITEM_TEMPLATES[0].visual = ' ';
+    snprintf(game.ITEM_TEMPLATES[0].name,NAME_MAX_ITEM,"Nothing");
+    game.ITEM_TEMPLATES[1].arm = 101;
+    game.ITEM_TEMPLATES[1].atk = 101;
+    game.ITEM_TEMPLATES[1].def = 101;
+    game.ITEM_TEMPLATES[1].dmg = 101;
+    game.ITEM_TEMPLATES[1].level_id = -1; // afterlife for items?
+    game.ITEM_TEMPLATES[1].x = 0;
+    game.ITEM_TEMPLATES[1].y = 0;
+    game.ITEM_TEMPLATES[1].visual = '*';
+    snprintf(game.ITEM_TEMPLATES[1].name,NAME_MAX_ITEM,"Paperweight");
     
     game.item_index = 0;
     for (int i=0;i<MAX_ITEMS;i++) {
-        game.items[i] = ITEM_TEMPLATES[0]; 
+        game.items[i] = game.ITEM_TEMPLATES[0]; 
     }
-    game.items[game.item_index] = ITEM_TEMPLATES[1];
-    game.items[game.item_index].x = 12;
-    game.items[game.item_index].y = 12;
-    game.items[game.item_index].level_id = 0;
-    game.item_index++;
+    //game.items[game.item_index] = game.ITEM_TEMPLATES[1];
+    //game.items[game.item_index].x = 12;
+    //game.items[game.item_index].y = 12;
+    //game.items[game.item_index].level_id = 0;
+    //game.item_index++;
     
 
 }
 
 void critters_setup() {
     // standard template for a level 1 human 
-    TEMPLATES[CRITTER_HUMAN].color = COLORS[COLOR_DEFAULT_FG];
-    snprintf(TEMPLATES[CRITTER_HUMAN].name,80,"Human");
-    TEMPLATES[CRITTER_HUMAN].visual = '@';
-    TEMPLATES[CRITTER_HUMAN].sex = SEX_MALE;
-    TEMPLATES[CRITTER_HUMAN].x = 0;
-    TEMPLATES[CRITTER_HUMAN].y = 0;
-    TEMPLATES[CRITTER_HUMAN].hit_dice = 1;
-    TEMPLATES[CRITTER_HUMAN].maxhp = TEMPLATES[CRITTER_HUMAN].hit_dice * 10;
-    TEMPLATES[CRITTER_HUMAN].hp = TEMPLATES[CRITTER_HUMAN].maxhp;
-    TEMPLATES[CRITTER_HUMAN].maxsp = TEMPLATES[CRITTER_HUMAN].hit_dice * 5;
-    TEMPLATES[CRITTER_HUMAN].sp = TEMPLATES[CRITTER_HUMAN].maxsp;
-    TEMPLATES[CRITTER_HUMAN].arm = 10;
-    TEMPLATES[CRITTER_HUMAN].atk = 10;
-    TEMPLATES[CRITTER_HUMAN].def = 10;
-    TEMPLATES[CRITTER_HUMAN].dmg = 10;
-    TEMPLATES[CRITTER_HUMAN].xp = 0;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].color = COLORS[COLOR_DEFAULT_FG];
+    snprintf(game.CRITTER_TEMPLATES[CRITTER_HUMAN].name,80,"Human");
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].visual = '@';
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].sex = SEX_MALE;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].x = 0;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].y = 0;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].hit_dice = 1;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].maxhp = game.CRITTER_TEMPLATES[CRITTER_HUMAN].hit_dice * 10;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].hp = game.CRITTER_TEMPLATES[CRITTER_HUMAN].maxhp;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].maxsp = game.CRITTER_TEMPLATES[CRITTER_HUMAN].hit_dice * 5;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].sp = game.CRITTER_TEMPLATES[CRITTER_HUMAN].maxsp;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].arm = 10;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].atk = 10;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].def = 10;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].dmg = 10;
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].xp = 0;
     for (int i=0;i<CRITTER_FLAGS;i++) {
-        TEMPLATES[CRITTER_HUMAN].flags[i] = 0;
+        game.CRITTER_TEMPLATES[CRITTER_HUMAN].flags[i] = 0;
     }
     // item setup
-    TEMPLATES[CRITTER_HUMAN].inventory[0] = ITEM_TEMPLATES[1]; // paperweight
+    game.CRITTER_TEMPLATES[CRITTER_HUMAN].inventory[0] = game.ITEM_TEMPLATES[1]; // paperweight
     for (int i=1;i<INVENTORY_SIZE;i++) {
-        TEMPLATES[CRITTER_HUMAN].inventory[i] = ITEM_TEMPLATES[0]; // nothing
+        game.CRITTER_TEMPLATES[CRITTER_HUMAN].inventory[i] = game.ITEM_TEMPLATES[0]; // nothing
     }
     for (int i=0;i<ITEM_SLOTS;i++) {
-        TEMPLATES[CRITTER_HUMAN].slots[i] = ITEM_NONE_EQUIPPED; // means no damn item there
+        game.CRITTER_TEMPLATES[CRITTER_HUMAN].slots[i] = ITEM_NONE_EQUIPPED; // means no damn item there
     }
+    
+    // generate random critters!
+    generate_critter_templates();
     
     // the player critter is there
     game.critter_index = 1;    
     // to avoid uninitialized
     for (int i=0;i<MAX_CRITTERS;i++) {
-        game.critters[i] = TEMPLATES[CRITTER_HUMAN];
+        game.critters[i] = game.CRITTER_TEMPLATES[CRITTER_HUMAN];
     }
 }
 
@@ -169,7 +202,7 @@ int new_game_setup() {
     tiles_setup();
     items_setup();
     critters_setup();
-    generate_critters(0);
+    //generate_critters(0); // moved to generate_maps()
     status_msg_setup();
     
     
